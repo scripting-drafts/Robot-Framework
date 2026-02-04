@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Robot Framework outputs
+reports/
+output.xml
+log.html
+report.html
+
+# Android APKs
+apps/*.apk
+
+# OS files
+.DS_Store
+Thumbs.db
