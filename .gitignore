@@ -15,3 +15,5 @@ apps/*.apk
 # OS files
 .DS_Store
 Thumbs.db
+None
+console
