@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../common/app.robot
-Library     AppiumLibrary
+ 
 
 *** Keywords ***
 Toggle Checkbox
@@ -24,3 +24,13 @@ Text In First Field Should Be
     [Arguments]    ${expected}
     ${value}=    Get Text    xpath=(//android.widget.EditText)[1]
     Should Be Equal    ${value}    ${expected}
+
+Checkbox Should Be Selected
+    [Arguments]    ${label}
+    ${state}=    Get Element Attribute    xpath=//android.widget.CheckBox[@text="${label}"]    checked
+    Should Be Equal    ${state}    true
+
+Radio Button Should Be Selected
+    [Arguments]    ${label}
+    ${state}=    Get Element Attribute    xpath=//android.widget.RadioButton[@text="${label}"]    checked
+    Should Be Equal    ${state}    true
